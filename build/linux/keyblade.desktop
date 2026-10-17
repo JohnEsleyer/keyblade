@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Keyblade
+GenericName=Authenticator
+Comment=Minimal, offline TOTP desktop authenticator
+Exec=keyblade %u
+Icon=keyblade
+Terminal=false
+Type=Application
+Categories=Utility;Security;
+StartupNotify=true
+StartupWMClass=keyblade
+Keywords=totp;2fa;two-factor;otp;authenticator;security;

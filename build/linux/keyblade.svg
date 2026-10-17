@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="50%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#040405" />
+    </linearGradient>
+
+    <!-- Border Glow -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3f3f46" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#27272a" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#18181b" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Metallic Key Accent -->
+    <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#e4e4e7" />
+      <stop offset="100%" stop-color="#71717a" />
+    </linearGradient>
+
+    <!-- Subtle Radial Glow -->
+    <radialGradient id="ambientGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#f4f4f5" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Base Squircle with Shadow -->
+  <rect
+    x="32"
+    y="32"
+    width="448"
+    height="448"
+    rx="104"
+    fill="url(#bgGrad)"
+    stroke="url(#borderGrad)"
+    stroke-width="3"
+    filter="url(#shadow)"
+  />
+
+  <!-- Ambient Light Reflection -->
+  <rect x="32" y="32" width="448" height="448" rx="104" fill="url(#ambientGlow)" />
+
+  <!-- Outer TOTP Ring (Ticker Dial) -->
+  <circle
+    cx="256"
+    cy="256"
+    r="168"
+    fill="none"
+    stroke="#27272a"
+    stroke-width="4"
+    stroke-dasharray="8 12"
+  />
+
+  <!-- Active Countdown Arc -->
+  <circle
+    cx="256"
+    cy="256"
+    r="168"
+    fill="none"
+    stroke="#e4e4e7"
+    stroke-width="5"
+    stroke-dasharray="1055"
+    stroke-dashoffset="290"
+    stroke-linecap="round"
+    transform="rotate(-90 256 256)"
+  />
+
+  <!-- Center Shield Base -->
+  <path
+    d="M 256 120 
+       C 310 156, 344 168, 360 180 
+       C 360 270, 316 348, 256 384 
+       C 196 348, 152 270, 152 180 
+       C 168 168, 202 156, 256 120 Z"
+    fill="#121215"
+    stroke="#27272a"
+    stroke-width="2.5"
+  />
+
+  <!-- Keyblade & TOTP Core Symbol -->
+  <g transform="translate(0, 0)">
+    <!-- Key Bow / Dial Ring -->
+    <circle
+      cx="210"
+      cy="294"
+      r="44"
+      fill="none"
+      stroke="url(#bladeGrad)"
+      stroke-width="18"
+      stroke-linecap="round"
+    />
+
+    <!-- Inner Key Pivot -->
+    <circle cx="210" cy="294" r="14" fill="#a1a1aa" />
+
+    <!-- Shaft of the Keyblade -->
+    <path
+      d="M 241 263 L 332 172"
+      stroke="url(#bladeGrad)"
+      stroke-width="18"
+      stroke-linecap="round"
+    />
+
+    <!-- Teeth / Bitting of the Keyblade -->
+    <path
+      d="M 306 198 L 328 220 M 326 178 L 350 202 M 346 158 L 358 170"
+      stroke="url(#bladeGrad)"
+      stroke-width="14"
+      stroke-linecap="round"
+    />
+
+    <!-- Guard Wing Accent -->
+    <path
+      d="M 248 288 C 260 280, 276 274, 286 280"
+      fill="none"
+      stroke="#71717a"
+      stroke-width="6"
+      stroke-linecap="round"
+    />
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+# Textify output
+codebase.txt
+
+# Build output
+build/bin
+frontend/dist
+/keyblade
+
+# Dependencies
+node_modules
+
+# Go
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Editors / OS
+.DS_Store
+.idea
+.vscode
+*.log

@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --wails-drop-target: drop;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-100 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    letter-spacing: -0.01em;
+    overflow: hidden;
+  }
+
+  ::selection {
+    @apply bg-zinc-100 text-zinc-950;
+  }
+
+  input,
+  button,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply border border-zinc-800/80 bg-zinc-950/70 backdrop-blur-xl;
+  }
+
+  .glow-ring {
+    box-shadow: 0 0 0 1px rgba(244, 244, 245, 0.06),
+      0 0 24px -8px rgba(244, 244, 245, 0.18);
+  }
+}
+
+/* Minimal, monochrome scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(63, 63, 70, 0.6);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(82, 82, 91, 0.9);
+  background-clip: content-box;
+}
